@@ -8,8 +8,20 @@ import NavBar from './Components/NavBar/navBar';
 
 
 function App() {
+
+  const [Post, setPost] = useState([]);
+
+  function addNewPost(post){
+    let tempPost = [post, ...Post];
+
+    setPost(tempPost);
+  }
   return (
-    <div >
+    <div className='container'>
+      <NavBar/>
+      <SongTable/>
+      <SearchBar/>
+    
     </div>
   );
 }
