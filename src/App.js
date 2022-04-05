@@ -33,10 +33,8 @@ function App() {
   return (
     <div className='container'>
       <NavBar/>
-      
-      {/* <SongTable Songs={Songs}/> */}
       <SearchBar placeholder='Search' data={Songs}/>
-      
+            {/* <SongTable Songs={Songs}/> */}
     </div>
   );
 }
