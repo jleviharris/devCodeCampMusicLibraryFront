@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "./index.css";
-import SongTable from './Components/SongTable/songTable';
+// import SongTable from './Components/SongTable/songTable';
 import SearchBar from './Components/SearchBar/searchBar';
 import NavBar from './Components/NavBar/navBar';
 // import { render } from '@testing-library/react';
 import axios from 'axios';
+
   
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         setSongs(tempSongs);
       }
     placeSongs();
+    
     }
     catch (ex) {
       console.log('Error in API call');
@@ -26,13 +28,14 @@ function App() {
   } 
     useEffect(() => {
       getData()
-    },[]);
-
+    }, []);
+    console.log(Songs);
   return (
     <div className='container'>
       <NavBar/>
-      <SongTable Songs={Songs}/>
-      <SearchBar/>
+      
+      {/* <SongTable Songs={Songs}/> */}
+      <SearchBar placeholder='Search' data={Songs}/>
       
     </div>
   );

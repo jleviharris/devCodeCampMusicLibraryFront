@@ -1,7 +1,7 @@
 import "./songTable.css"
 const SongTable = (props) => {
     return (
-    <table class="table table-hover">
+    <table className="table table-hover">
     <thead>
       <tr>
         <th scope="col">#</th>
