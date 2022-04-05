@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "./index.css";
 import SongTable from './Components/SongTable/songTable';
-// import SearchBar from './Components/SearchBar/searchBar';
-// import NavBar from './Components/NavBar/navBar';
+import SearchBar from './Components/SearchBar/searchBar';
+import NavBar from './Components/NavBar/navBar';
 // import { render } from '@testing-library/react';
 import axios from 'axios';
   
@@ -30,9 +30,9 @@ function App() {
 
   return (
     <div className='container'>
-      {/* <NavBar/> */}
+      <NavBar/>
       <SongTable Songs={Songs}/>
-      {/* <SearchBar/> */}
+      <SearchBar/>
       
     </div>
   );
