@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./index.css";
-// import SongTable from './Components/SongTable/songTable';
+import SongTable from './Components/SongTable/songTable';
 import SearchBar from './Components/SearchBar/searchBar';
 import NavBar from './Components/NavBar/navBar';
 // import { render } from '@testing-library/react';
@@ -34,7 +34,6 @@ function App() {
     <div className='container'>
       <NavBar/>
       <SearchBar placeholder='Search' data={Songs}/>
-            {/* <SongTable Songs={Songs}/> */}
     </div>
   );
 }

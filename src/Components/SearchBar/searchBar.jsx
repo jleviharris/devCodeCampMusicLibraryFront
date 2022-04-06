@@ -1,8 +1,7 @@
-// import SongTable from "../SongTable/songTable";
+import SongTable from "../SongTable/songTable";
 import "./searchBar.css";
 import React, { useState } from 'react';
 
-// import Songs from "../../App";
 
 
 function SearchBar({placeholder, data}) {
@@ -27,25 +26,27 @@ function SearchBar({placeholder, data}) {
         } else {
         setFilteredData(newFilter);}
     }
-
+   
     
     return (
         <div className="search">
             <div className="searchInputs">
                 <input type="text" placeholder={placeholder} onChange={handleFilter}/>
                 <div className="searchIcon">
-                    {filteredData.length === 0 ? <i className="bi bi-search"></i> : <i className="bi bi-x"></i>}
+                {/* <button onClick={<SongTable Songs={Songs}/>}><a><i className="fa-solid fa-magnifying-glass"></i></a></button> */}
                 </div>
             </div>
-            {filteredData.length !== 0 && (
+            
+            {filteredData.length !== 0 ? (
                 <div className="dataResults">
-                    {filteredData.map((value, key) => {
-                        return (
-                        <div className="dataItem"> {value.title} </div>
-                    );
-                    })}
+                     <SongTable Songs={data} filteredData={filteredData}/>      
                 </div>
-            )}
+            ) : (
+                <div className="dataResults">
+                <SongTable Songs={data} filteredData={data}/>      
+           </div>
+            )
+            }
         </div>
         
     );
