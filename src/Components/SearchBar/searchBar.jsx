@@ -1,5 +1,4 @@
 import SongTable from "../SongTable/songTable";
-import "./searchBar.css";
 import React, { useState } from 'react';
 
 
@@ -33,17 +32,20 @@ function SearchBar({placeholder, data}) {
             <div className="searchInputs">
                 <input type="text" placeholder={placeholder} onChange={handleFilter}/>
                 <div className="searchIcon">
-                {/* <button onClick={<SongTable Songs={Songs}/>}><a><i className="fa-solid fa-magnifying-glass"></i></a></button> */}
                 </div>
             </div>
             
             {filteredData.length !== 0 ? (
-                <div className="dataResults">
+                <div className="container-fluid">
+                <div id="dataResults">
                      <SongTable Songs={data} filteredData={filteredData}/>      
                 </div>
+                </div>
             ) : (
-                <div className="dataResults">
+                <div className="container-fluid">
+                <div id="dataResults">
                 <SongTable Songs={data} filteredData={data}/>      
+           </div>
            </div>
             )
             }

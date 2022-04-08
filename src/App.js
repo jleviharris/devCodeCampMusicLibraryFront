@@ -32,7 +32,7 @@ function App() {
     console.log(Songs);
   return (
     <div className='container'>
-      <NavBar/>
+      <NavBar className='navbar'/>
       <SearchBar placeholder='Search' data={Songs}/>
     </div>
   );
