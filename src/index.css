@@ -31,14 +31,10 @@
   align-items: center;
   color: black;
 }
-
 .dataItem p {
   /* margin-left: 10px; */
 }
-.search {
-  text-align: center;
-}
 .container-fluid {
-  align-items: center;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
